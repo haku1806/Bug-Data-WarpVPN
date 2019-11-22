@@ -7,7 +7,7 @@ import string
 
 print("Chuong trinh buff Data Warp+ VPN")
 referrer = input("Nhap ID Warp+ Can buff: ")
-timesToLoop = input("Nhap so GB can buff (nhap 0 lap vo han): ")
+timesToLoop = int(input("Nhap so GB can buff (nhap 0 lap vo han): "))
 retryTimes = 0.5
 
 
@@ -62,7 +62,7 @@ if(timesToLoop == 0):
 		                if r == retryTimes - 1:
 		                    exit()
 		    i += 1
-else:
+elif(timesToLoop != 0):
 	for i in range(0, timesToLoop):
 		    result = run()
 		    if result.status_code == 200:
